@@ -26,6 +26,7 @@
   height: 32px;
   margin-top: 0;
   margin-bottom: 0;
+  object-fit: fill;
 }
 
 .logo_place_header {
@@ -35,12 +36,14 @@
 }
 
 .header__title {
-  width: 730px;
+  max-width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
-  left: 64px;
-  position: absolute;
+  margin-left: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 2;
   margin-top: 0;
   margin-bottom: 0;
@@ -50,7 +53,7 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  width: 388px;
+  max-width: 388px;
   position: absolute;
   bottom: 30px;
   left: 64px;
@@ -68,6 +71,7 @@
   width: 765px;
   height: 608px;
   position: absolute;
+  object-fit: cover;
   bottom: 0;
   right: 0;
   z-index: 1;
@@ -150,6 +154,9 @@
 }
 
 .table {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -175,6 +182,9 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .table__text:last-child {
@@ -185,10 +195,8 @@
   margin-bottom: 20px;
 }
 
-
-
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   position: relative;
   display: flex;
@@ -204,12 +212,13 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  object-fit: cover;
 }
 
 .feynman__title {
   margin-top: 100px;
   margin-bottom: 70px;
-  width: 648px;
+  max-width: 648px;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
@@ -242,13 +251,20 @@
   overflow: hidden;
   padding-top: 90px;
   padding-bottom: 90px;
+  background-image: url(/images/kaufman-triangle.svg);
+  background-size: 877px 877px;
+  background-repeat: no-repeat;
+  background-position: top 0 right -210px;
+}
+
+.kaufman__triangle {
+  z-index: -1;
 }
 
 .section-title_theme_dark {
   color: white;
   margin: 0 auto;
   margin-bottom: 20px;
-
 }
 
 .section-subtitle_theme_dark {
@@ -273,28 +289,22 @@
   margin-bottom: 0;
 }
 
-.kaufman__triangle {
-  width: 877px;
-  height: 877px;
-  position: absolute;
-  right: -210px;
-  top: 0;
-}
-
 .footer {
   min-height: 350px;
+  height: 1px;
   background-color: #1f1f1f;
   color: white;
   padding-top: 60px;
   padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
-  min-height: 350px;
   width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .footer__column_content_copyright {
